@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+/*preliminary setting of the project */
+*,*::before, after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+}
+body{
+	font-family: montserrat, sans-serif; /* the font family for the page, these the two most common familes used on websites */
+}
+.nav_menu /* This is to format the whole navigation bar */
+{
+	width: 100%;
+	box-shadow: 0 0 10px #808B96; /* applying a box shadow in the nav bar with 0 pixel in the x and y and 10 pixel blur the color chosen */
+}
+.nav_menu .nav_list /* working with first ul and with make it a flexbox */
+{
+	display: flex;
+	justify-content: flex-end; /*information to be on the right of the page */
+	align-items: center;
+	gap: 2rem; /* apying gap between elements */
+	margin: 0 2rem/* top bottom margin */
+}
+.nav_menu .nav_list .nav_list_logo /* format the logo of the company */
+{
+	list-style: none;
+	margin-right: auto; /* this will push the logo to the right of the page */
+	cursor: pointer; /* to make the logo appear interactive */	
+}
+.nav_menu .nav_list .nav_list_li
+{
+	list-style: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration:none;
+	position: relative;
+	padding: 1.5rem 1rem;
+	cursor: pointer;
+	text-decoration: none;
+}
+.nav_menu .nav_list .nav_list_li a
+{
+	list-style: none;
+	text-decoration:none;
+	font-size: 13px;
+	padding:0px 2px;
+}
+.nav_menu .nav_list .nav_list_li:hover ul, .nav_menu .nav_list .nav_list_li:focus ul 
+{
+	opacity:1;
+	visibility:visible;
+	color: #78281F;		
+}
+.nav_menu .nav_list .nav_list_li a:hover
+{
+	opacity:1;
+	visibility:visible;
+	color: #78281F;	
+	text-decoration: underline;
+}
+.nav_list_li_ul
+{
+	position: absolute;
+	top: 4rem;
+	left: -1rem;
+	box-shadow: 0 0 10px #808B96;
+	background-color: rgb(228,230,225, 0.5);
+	border-radius: 0.2rem;
+	width: 14rem;
+	padding: .5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 200ms ease-in-out;	/* to fade away during transition */
+}
+.nav_list_li_ul li{
+	list-style: none;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+
+}
+.nav_list_li_ul li a{
+	list-style: none;
+	text-decoration:none;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	transition:all background-color 0.4s ease-in-out;	
+}
+.nav_list_li_ul li:hover, .nav_list_li_ul li{
+	background-color: #F2F5F9;
+	text-decoration: underline;
+}
